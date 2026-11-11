@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
+/* Dev Coffee: roasted espresso, steamed milk, crema gold. */
 :root {
-  --paper: #fbfaf7;
-  --panel: #ffffff;
-  --ink: #1f1a17;
-  --muted: #6f6660;
-  --line: #ebe6df;
-  --espresso: #3b2416;
-  --crema: #f2a541;
-  --mint: #2fae86;
+  --paper: #f7f1e8;
+  --panel: #fffdf9;
+  --ink: #231812;
+  --muted: #7a6a5f;
+  --line: #e7dccd;
+  --espresso: #2a1a12;
+  --roast: #4a2c1d;
+  --crema: #e0a458;
+  --foam: #fbf4ea;
+  --mint: #2f9e7a;
+  --ticket: #fffef9;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #141110;
-    --panel: #1d1917;
-    --ink: #f3eee9;
-    --muted: #a99f97;
-    --line: #2e2825;
-    --espresso: #f3d9b8;
-    --crema: #f5b35c;
-    --mint: #4cc9a0;
+    --paper: #17110d;
+    --panel: #211812;
+    --ink: #f4ebe1;
+    --muted: #b3a294;
+    --line: #35271e;
+    --espresso: #0f0a07;
+    --roast: #2c1c13;
+    --crema: #eab26a;
+    --foam: #f4ebe1;
+    --mint: #52c79f;
+    --ticket: #fbf6ee;
   }
 }
 
@@ -31,12 +38,17 @@
   --color-muted: var(--muted);
   --color-line: var(--line);
   --color-espresso: var(--espresso);
+  --color-roast: var(--roast);
   --color-crema: var(--crema);
+  --color-foam: var(--foam);
   --color-mint: var(--mint);
+  --color-ticket: var(--ticket);
   --font-sans: var(--font-manrope);
   --font-display: var(--font-dm-serif);
   --font-mono: var(--font-geist-mono);
 }
+
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--paper);
@@ -46,28 +58,64 @@ body {
 
 :focus-visible {
   outline: 2px solid var(--crema);
-  outline-offset: 2px;
-  border-radius: 8px;
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+.hero {
+  background:
+    radial-gradient(60% 80% at 85% 20%, color-mix(in oklab, var(--crema) 28%, transparent), transparent 60%),
+    radial-gradient(50% 60% at 10% 100%, color-mix(in oklab, #8a4b2a 45%, transparent), transparent 70%),
+    linear-gradient(160deg, var(--roast), var(--espresso) 70%);
+}
+
+/* Fine coffee-bean grain over the hero */
+.grain {
+  background-image: radial-gradient(color-mix(in oklab, white 7%, transparent) 1px, transparent 1px);
+  background-size: 4px 4px;
 }
 
 @keyframes steam {
-  0% { transform: translateY(4px) scaleX(1); opacity: 0; }
-  40% { opacity: 0.7; }
-  100% { transform: translateY(-14px) scaleX(1.3); opacity: 0; }
+  0% { transform: translateY(10px) scaleY(0.8); opacity: 0; }
+  30% { opacity: 0.55; }
+  100% { transform: translateY(-30px) scaleY(1.15); opacity: 0; }
 }
-.steam span {
-  display: inline-block;
-  animation: steam 2.6s ease-in-out infinite;
-}
-.steam span:nth-child(2) { animation-delay: 0.5s; }
-.steam span:nth-child(3) { animation-delay: 1s; }
+.steam path { animation: steam 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom; }
+.steam path:nth-child(2) { animation-delay: 0.9s; }
+.steam path:nth-child(3) { animation-delay: 1.8s; }
 
-@keyframes pop {
-  from { opacity: 0; transform: translateY(6px) scale(0.98); }
+/* Receipt ticket with a torn bottom edge */
+.ticket {
+  background: var(--ticket);
+  color: #2a1a12;
+  --tooth: 8px;
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / calc(var(--tooth) * 2) var(--tooth) repeat-x,
+    linear-gradient(#000 0 0) top / 100% calc(100% - var(--tooth)) no-repeat;
+  mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / calc(var(--tooth) * 2) var(--tooth) repeat-x,
+    linear-gradient(#000 0 0) top / 100% calc(100% - var(--tooth)) no-repeat;
+}
+
+@keyframes drop {
+  from { opacity: 0; transform: translateY(-14px) rotate(-1.5deg); }
   to { opacity: 1; transform: none; }
 }
-.pop { animation: pop 0.35s ease-out both; }
+.drop { animation: drop 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.2) both; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+.rise { animation: rise 0.5s ease-out both; }
+
+.menu-dots {
+  background-image: radial-gradient(currentColor 1px, transparent 1.2px);
+  background-size: 7px 3px;
+  background-repeat: repeat-x;
+  background-position: left center;
+  opacity: 0.35;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .steam span, .pop { animation: none; }
+  html { scroll-behavior: auto; }
+  .steam path, .drop, .rise { animation: none; }
 }

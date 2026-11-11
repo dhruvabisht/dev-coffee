@@ -26,6 +26,8 @@ function create() {
       }),
     ],
     secretKey: env("MPP_SECRET_KEY"),
+    // Public hostname agents call (must match the Host they see). Falls back to auto-detection.
+    realm: (process.env.MPP_REALM || "").trim().replace(/^['"]|['"]$/g, "") || undefined,
   });
 }
 
