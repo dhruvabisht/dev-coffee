@@ -7,7 +7,9 @@ export async function GET(req: Request) {
 
 > Buy an independent developer a coffee. People and AI agents can tip developers in one HTTP request using the Machine Payments Protocol (MPP). No account and no API key.
 
-Price: $${COFFEE_PRICE} per coffee, paid with MPP on Tempo testnet (free test money; nothing real is charged).
+Price: $${COFFEE_PRICE} per coffee, paid with MPP. Two ways to pay, both test-only (nothing real is charged):
+- Tempo testnet stablecoin (method "tempo")
+- A Stripe card via Shared Payment Token, Stripe test mode (method "stripe", currency usd)
 
 ## For agents
 1. Find the developer (free): GET ${o}/api/devs?q=<what they built>

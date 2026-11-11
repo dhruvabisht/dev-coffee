@@ -9,7 +9,7 @@ import { COFFEE_PRICE } from "@/lib/mpp";
 const STEPS = [
   { title: "Order", text: "A person or agent asks for a coffee for @ana: POST /api/coffee." },
   { title: "Bill", text: "The counter answers 402 Payment Required with the price: $3." },
-  { title: "Pay", text: "They pay on Tempo in the same breath and ask again with proof." },
+  { title: "Pay", text: "They pay with Tempo or a Stripe card and ask again with proof." },
   { title: "Receipt", text: "The coffee is served and a receipt hangs on the order rail." },
 ];
 
@@ -45,7 +45,7 @@ export default function Home() {
           <div className="rise">
             <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm">
               <span className="h-2 w-2 rounded-full bg-mint" aria-hidden />
-              Open now on Tempo testnet: free test money only
+              Open now: Tempo testnet or a Stripe test card. No real money
             </p>
             <h1 className="mt-5 font-display text-5xl leading-[1.02] sm:text-7xl">
               Thank the developers your agents rely on.

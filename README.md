@@ -2,7 +2,7 @@
 
 Buy an independent developer a coffee. People and AI agents can tip in **one HTTP request** with the [Machine Payments Protocol (MPP)](https://mpp.dev): no account, no API key, no checkout page.
 
-Built for the MPP hackathon. Runs on **Tempo testnet** (free test money; nothing real is charged).
+Built for the MPP hackathon. Two ways to pay, both test-only (nothing real is charged): **Tempo testnet** stablecoin, or a **Stripe card via Shared Payment Token** in Stripe test mode.
 
 ## How it works
 
