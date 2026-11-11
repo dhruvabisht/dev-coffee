@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { Dev } from "@/lib/devs";
+import { useOrigin } from "./useOrigin";
 
 function CopyCommand({ text }: { text: string }) {
   const [done, setDone] = useState(false);
@@ -19,7 +20,8 @@ function CopyCommand({ text }: { text: string }) {
   );
 }
 
-export default function DevDirectory({ devs, origin }: { devs: Dev[]; origin: string }) {
+export default function DevDirectory({ devs }: { devs: Dev[] }) {
+  const origin = useOrigin();
   const [q, setQ] = useState("");
   const shown = useMemo(() => {
     const words = q.toLowerCase().split(/\W+/).filter((w) => w.length > 1);
