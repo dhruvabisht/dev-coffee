@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "providers": {
+    "neon": {
+      "name": "Neon"
+    },
+    "stripe": {
+      "name": "stripe"
+    },
+    "vercel": {
+      "name": "Vercel"
+    }
+  },
+  "resources": {
+    "neon-plan": {
+      "livemode": true,
+      "name": "neon-plan",
+      "providerName": "Neon",
+      "serviceId": "free"
+    },
+    "neon-postgres": {
+      "livemode": true,
+      "name": "neon-postgres",
+      "providerName": "Neon",
+      "serviceId": "postgres"
+    },
+    "stripe-sandbox": {
+      "livemode": true,
+      "name": "stripe-sandbox",
+      "providerName": "stripe",
+      "serviceId": "sandbox"
+    },
+    "vercel-plan": {
+      "livemode": true,
+      "name": "vercel-plan",
+      "providerName": "Vercel",
+      "serviceId": "hobby"
+    },
+    "y": {
+      "livemode": true,
+      "name": "y",
+      "providerName": "Vercel",
+      "serviceId": "project"
+    }
+  }
+}

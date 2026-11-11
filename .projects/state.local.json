@@ -1,0 +1,97 @@
+{
+  "version": 4,
+  "project": {
+    "catalog": "prod",
+    "initializedAt": "2026-11-11T14:29:53.493Z",
+    "merchantDisplayName": null,
+    "merchantId": "acct_1UaYcUFny3ZKhi9X",
+    "projectId": "project_61Vk0UTfkoXEeclvU16VjwZrLGGCCqfNXZpJvI9Am9W4",
+    "projectName": "dev-coffee"
+  },
+  "providers": {
+    "neon": {
+      "accountRequestId": "fprvcnn_61VjyfJSW4d47B3ZN16VjwZrLGGCCqfNXZpJvI9Am4Tw",
+      "configuration": {},
+      "linkedAt": "2026-11-11T12:32:57.547Z",
+      "providerId": "prvdr_61UH8uNXFdoJUJOtT54AC",
+      "providerName": "Neon",
+      "redirectUrl": null,
+      "requestedAt": "2026-11-11T12:32:57.547Z",
+      "status": "complete"
+    },
+    "vercel": {
+      "accountRequestId": "fprvcnn_61Vjyj4ZdE078qlFI16VjwZrLGGCCqfNXZpJvI9AmV8K",
+      "configuration": {},
+      "linkedAt": "2026-11-11T12:36:50.694Z",
+      "providerId": "prvdr_61ULUAr4zlQgZkvXY5LsG",
+      "providerName": "Vercel",
+      "redirectUrl": null,
+      "requestedAt": "2026-11-11T12:36:50.694Z",
+      "status": "complete"
+    }
+  },
+  "resources": {
+    "neon-plan": {
+      "configuration": {},
+      "createdAt": "2026-11-11T14:30:13.747Z",
+      "lastRevealedAt": "2026-11-11T14:30:14.140Z",
+      "lastStatus": "complete",
+      "livemode": true,
+      "name": "neon-plan",
+      "providerId": "prvdr_61UH8uNXFdoJUJOtT54AC",
+      "providerName": "Neon",
+      "resourceId": "fres_61Vk0UmFy8oFlt6Q316VjwZrLGGCCqfNXZpJvI9AmCVE",
+      "serviceId": "free"
+    },
+    "neon-postgres": {
+      "configuration": {},
+      "createdAt": "2026-11-11T14:30:23.692Z",
+      "lastRevealedAt": "2026-11-11T14:30:24.135Z",
+      "lastStatus": "complete",
+      "livemode": true,
+      "name": "neon-postgres",
+      "providerId": "prvdr_61UH8uNXFdoJUJOtT54AC",
+      "providerName": "Neon",
+      "resourceId": "fres_61Vk0UwoOV75im4C916VjwZrLGGCCqfNXZpJvI9Am6IC",
+      "serviceId": "postgres"
+    },
+    "stripe-sandbox": {
+      "configuration": {},
+      "createdAt": "2026-11-11T14:41:28.703Z",
+      "lastRevealedAt": "2026-11-11T14:41:29.214Z",
+      "lastStatus": "complete",
+      "livemode": true,
+      "name": "stripe-sandbox",
+      "providerId": "prvdr_stripe_native",
+      "providerName": "stripe",
+      "resourceId": "fres_61Vk0fesDiyFuDHLy16VjwZrLGGCCqfNXZpJvI9AmK1Q",
+      "serviceId": "sandbox"
+    },
+    "vercel-plan": {
+      "configuration": {},
+      "createdAt": "2026-11-11T14:30:33.945Z",
+      "lastRevealedAt": "2026-11-11T14:30:34.455Z",
+      "lastStatus": "complete",
+      "livemode": true,
+      "name": "vercel-plan",
+      "providerId": "prvdr_61ULUAr4zlQgZkvXY5LsG",
+      "providerName": "Vercel",
+      "resourceId": "fres_61Vk0V5knK7Nmzbuz16VjwZrLGGCCqfNXZpJvI9Am2JM",
+      "serviceId": "hobby"
+    },
+    "y": {
+      "configuration": {
+        "name": "y"
+      },
+      "createdAt": "2026-11-11T14:30:47.060Z",
+      "lastRevealedAt": "2026-11-11T14:30:47.750Z",
+      "lastStatus": "complete",
+      "livemode": true,
+      "name": "y",
+      "providerId": "prvdr_61ULUAr4zlQgZkvXY5LsG",
+      "providerName": "Vercel",
+      "resourceId": "fres_61Vk0VJPXNQr2x4wu16VjwZrLGGCCqfNXZpJvI9AmVOK",
+      "serviceId": "project"
+    }
+  }
+}
